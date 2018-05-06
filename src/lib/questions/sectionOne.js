@@ -34,7 +34,6 @@ export const q1a = {
 
 export const q1b = {
   title: 'How continuous is the vegetation (other than pasture) in the riparian zone?',
-  note: 'Riparian Zone: "On or of the stream banks"',
   responses: [
     {
       score: 16,
@@ -63,6 +62,28 @@ export const q1b = {
     {
       score: 2,
       response: 'Many large gaps in tall vegetation/trees or no tall vegetation at all'
+    }
+  ]
+}
+
+export const q1c = {
+  title: 'What is the average width of vegetation (other than pasture) in the riparian zone?',
+  responses: [
+    {
+      score: 32,
+      repsonse: 'Greater than 30m.'
+    },
+    {
+      score: 16,
+      response: 'Between 10m and 30m'
+    },
+    {
+      score: 8,
+      response: 'Between 1m and 10m'
+    },
+    {
+      score: 4,
+      repsonse: '0m'
     }
   ]
 }
