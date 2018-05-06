@@ -1,12 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import * as questions from './src/lib/questions/sectionOne'
 
 export default class App extends React.Component {
   render() {
+    const question = questions.q1a
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
+        <Text>{question.title}</Text>
+        <Text>{question.responses[0].response}</Text>
         <Text>Shake your phone to open the developer menu.</Text>
       </View>
     );
