@@ -1,5 +1,5 @@
 export const q1a = {
-  title: "What type of vegetation is along the stream side?",
+  title: 'What type of vegetation is along the stream side?',
   responses: [
     {
       score: 16,
@@ -86,4 +86,8 @@ export const q1c = {
       repsonse: '0m'
     }
   ]
+}
+
+export const q1d = {
+
 }
