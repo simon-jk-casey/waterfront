@@ -1,4 +1,5 @@
 export const q1a = {
+  qNo: 'Q1a',
   title: 'What type of vegetation is along the stream side?',
   responses: [
     {
@@ -33,6 +34,7 @@ export const q1a = {
 }
 
 export const q1b = {
+  qNo: 'Q1b',
   title: 'How continuous is the vegetation (other than pasture) in the riparian zone?',
   responses: [
     {
@@ -67,6 +69,7 @@ export const q1b = {
 }
 
 export const q1c = {
+  qNo: 'Q1c',
   title: 'What is the average width of vegetation (other than pasture) in the riparian zone?',
   responses: [
     {
@@ -89,5 +92,24 @@ export const q1c = {
 }
 
 export const q1d = {
-
+  qNo: 'Q1d',
+  title: 'What percentage of the stream is shaded by plants and stream banks?',
+  responses: [
+    {
+      score: 16,
+      response: '50% or greater'
+    },
+    {
+      score: 8,
+      response: 'Between 30% and 50%'
+    },
+    {
+      score: 4,
+      response: 'Between 10% and 30%'
+    },
+    {
+      score: 2,
+      repsonse: 'Little or no shading'
+    }
+  ]
 }
