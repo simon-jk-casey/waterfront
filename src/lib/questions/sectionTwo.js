@@ -32,3 +32,42 @@ export const q2a = {
     }
   ]
 }
+
+export const q2b = {
+  qNo: 'Q2b',
+  title: 'Are there any snags to slow the stream flow?',
+  responses: [
+    {
+      score: 16,
+      response: 'Rocks and old logs firmly set in place'
+    },
+    {
+      score: 12,
+      response: null
+    },
+    {
+      score: 8,
+      response: 'Rocks and logs back filled with sediment'
+    },
+    {
+      score: 6,
+      response: null
+    },
+    {
+      score: 4,
+      response: 'Rocks and logs loose, moving with floods'
+    },
+    {
+      score: 3,
+      response: null
+    },
+    {
+      score: 2,
+      response: 'No obstructions to slow stream flow'
+    }
+  ]
+}
+
+export const q2c = {
+  qNo: 
+}
