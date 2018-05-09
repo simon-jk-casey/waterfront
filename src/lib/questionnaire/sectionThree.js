@@ -86,7 +86,7 @@ export const q3c = {
     },
     {
       score: 12,
-      repsonse: null
+      response: null
     },
     {
       score: 8,
