@@ -75,7 +75,7 @@ export const q2c = {
   responses: [
     {
       score: 16,
-      repsonse: '"Crystal" clear.'
+      response: '"Crystal" clear.'
     },
     {
       score: 12,
@@ -83,7 +83,7 @@ export const q2c = {
     },
     {
       score: 8,
-      repsonse: 'Slightly murky.'
+      response: 'Slightly murky.'
     },
     {
       score: 6,
