@@ -4,19 +4,19 @@ import { StyleSheet, Text, View } from 'react-native'
 import Questions from './src/components/questions'
 import Answers from './src/components/answers'
 
-import * as sectionOne from './src/lib/questionnaire/sectionOne'
+// import * as sectionOne from './src/lib/questionnaire/sectionOne'
+import qList from './src/lib/questionnaire/questions'
 
 export default class App extends React.Component {
   render () {
-    const question = sectionOne.q1a.title
-    const responses = sectionOne.q1a.responses
+    const questions = qList
 
     return (
       <View style={styles.container}>
-        <Questions question={question} />
-        <Answers responses={responses} />
+        <Questions question={questions[0].title} />
+        <Answers responses={questions[0].responses} />
         <Text>Hi Emily!</Text>
-        <Text>testing reload</Text>
+        <Text></Text>
         <Text>Shake your phone to open the developer menu.</Text>
       </View>
     )
