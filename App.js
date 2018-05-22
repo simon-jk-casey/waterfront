@@ -1,10 +1,16 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+import Questions from './src/components/questions'
+
+import * as sectionOne from './src/lib/questionnaire/sectionOne'
+
 export default class App extends React.Component {
   render () {
+    const question = sectionOne.q1a.title
     return (
       <View style={styles.container}>
+        <Questions question={question} />
         <Text>Hi Emily!</Text>
         <Text>testing reload</Text>
         <Text>Shake your phone to open the developer menu.</Text>
