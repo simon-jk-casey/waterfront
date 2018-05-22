@@ -6,9 +6,15 @@ export default class Answers extends React.Component {
     return (
       <View>
         {this.props.responses.map(response => {
-          return (
-            <Text key={response.score}>{response.response}</Text>
-          )
+          if (response.response === null) {
+            return (
+              <Text key={response.score}>PLACEHOLDER</Text>
+            )
+          } else {
+            return (
+              <Text key={response.score}>{response.response}</Text>
+            )
+          }
         })}
       </View>
     )
