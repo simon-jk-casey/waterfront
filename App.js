@@ -10,23 +10,30 @@ export default class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      currentQuestion: qList[0]
+      // currentQuestion: qList[0]
+      index: 0
     }
   }
   pressTest () {
     Alert.alert('Button Pressed')
   }
 
+  nextQuestion () {
+    if (this.state.index < qList.length) {
+      this.setState({ index: this.state.index + 1})
+    } else {
+      // BREAKS HERE DUE TO THE SINGLE VIEW - RESOLVE LATER
+    }
+  }
+
   render () {
+    let displayQ = qList[this.state.index]
     return (
       <View style={styles.container}>
-        <Questions question={this.state.currentQuestion.title} />
-        <Answers responses={this.state.currentQuestion.responses} />
-        <Text>Hi Emily!</Text>
-        <Text></Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Questions question={displayQ.title} />
+        <Answers responses={displayQ.responses} />
         <Button
-          onPress={this.pressTest}
+          onPress={this.nextQuestion.bind(this)}
           title='Next'
           color='#841584'
         />
