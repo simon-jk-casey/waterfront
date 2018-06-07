@@ -12,9 +12,9 @@ export default class App extends React.Component {
     this.state = {
       currentQuestion: qList[0]
     }
-    pressTest = () => {
-      Alert.alert('Button Pressed')
-    }
+  }
+  pressTest () {
+    Alert.alert('Button Pressed')
   }
 
   render () {
