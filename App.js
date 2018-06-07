@@ -1,23 +1,35 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button, Alert } from 'react-native'
 
 import Questions from './src/components/questions'
 import Answers from './src/components/answers'
 
-// import * as sectionOne from './src/lib/questionnaire/sectionOne'
 import qList from './src/lib/questionnaire/questions'
 
 export default class App extends React.Component {
-  render () {
-    const questions = qList
+  constructor (props) {
+    super(props)
+    this.state = {
+      currentQuestion: qList[0]
+    }
+    pressTest = () => {
+      Alert.alert('Button Pressed')
+    }
+  }
 
+  render () {
     return (
       <View style={styles.container}>
-        <Questions question={questions[0].title} />
-        <Answers responses={questions[0].responses} />
+        <Questions question={this.state.currentQuestion.title} />
+        <Answers responses={this.state.currentQuestion.responses} />
         <Text>Hi Emily!</Text>
         <Text></Text>
         <Text>Shake your phone to open the developer menu.</Text>
+        <Button
+          onPress={this.pressTest}
+          title='Next'
+          color='#841584'
+        />
       </View>
     )
   }
