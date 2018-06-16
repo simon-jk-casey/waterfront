@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native'
-import PropTypes from 'prop-types'
 
 export default class Answers extends React.Component {
   render () {
@@ -41,8 +40,4 @@ export default class Answers extends React.Component {
       </View>
     )
   }
-}
-
-Answers.propTypes = {
-  touchHandler: PropTypes.func.isRequired
 }

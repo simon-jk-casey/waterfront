@@ -17,6 +17,10 @@ export default class App extends React.Component {
     Alert.alert('Button Pressed')
   }
 
+  collect () {
+
+  }
+
   nextQuestion () {
     if (this.state.index < qList.length) {
       this.setState({ index: this.state.index + 1})
