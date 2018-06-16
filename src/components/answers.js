@@ -1,22 +1,48 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native'
+import PropTypes from 'prop-types'
 
 export default class Answers extends React.Component {
   render () {
+    const styles = StyleSheet.create({
+      touchable: {
+        alignItems: 'center',
+        backgroundColor: '#DDDDDD',
+        padding: 10,
+        marginBottom: 15
+      }
+    })
     return (
       <View>
         {this.props.responses.map(response => {
           if (response.response === null) {
             return (
-              <Text key={response.score}>PLACEHOLDER</Text>
+              <TouchableHighlight
+                key={response.score}
+                style={styles.touchable}
+                onPress={this.props.touchHandler}
+              >
+                <Text>PLACEHOLDER</Text>
+              </TouchableHighlight>
             )
           } else {
             return (
-              <Text key={response.score}>{response.response}</Text>
+              <TouchableHighlight
+                key={response.score}
+                style={styles.touchable}
+                onPress={this.props.touchHandler}
+              >
+                <Text>{response.response}</Text>
+              </TouchableHighlight>
+
             )
           }
         })}
       </View>
     )
   }
+}
+
+Answers.propTypes = {
+  touchHandler: PropTypes.func.isRequired
 }

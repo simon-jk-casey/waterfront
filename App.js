@@ -10,7 +10,6 @@ export default class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      // currentQuestion: qList[0]
       index: 0
     }
   }
@@ -31,7 +30,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Questions question={displayQ.title} />
-        <Answers responses={displayQ.responses} />
+        <Answers
+          responses={displayQ.responses}
+          touchHandler={this.pressTest}
+        />
         <Button
           onPress={this.nextQuestion.bind(this)}
           title='Next'
