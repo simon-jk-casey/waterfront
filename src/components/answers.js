@@ -20,6 +20,7 @@ export default class Answers extends React.Component {
                 key={response.score}
                 style={styles.touchable}
                 onPress={this.props.touchHandler}
+                value={response.score}
               >
                 <Text>PLACEHOLDER</Text>
               </TouchableHighlight>
@@ -30,6 +31,7 @@ export default class Answers extends React.Component {
                 key={response.score}
                 style={styles.touchable}
                 onPress={this.props.touchHandler}
+                value={response.score}
               >
                 <Text>{response.response}</Text>
               </TouchableHighlight>

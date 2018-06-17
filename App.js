@@ -14,11 +14,7 @@ export default class App extends React.Component {
     }
   }
   pressTest () {
-    Alert.alert('Button Pressed')
-  }
-
-  collect () {
-
+    Alert.alert('shit')
   }
 
   nextQuestion () {
