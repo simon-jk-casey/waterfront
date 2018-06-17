@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button, Alert } from 'react-native'
 
 import Questions from './src/components/questions'
 import Answers from './src/components/answers'
+import Form from './src/components/form'
 
 import qList from './src/lib/questionnaire/questions'
 
@@ -29,10 +30,11 @@ export default class App extends React.Component {
     let displayQ = qList[this.state.index]
     return (
       <View style={styles.container}>
-        <Questions question={displayQ.title} />
-        <Answers
+        <Form
+          question={displayQ.title}
+          qNo={displayQ.qNo}
           responses={displayQ.responses}
-          touchHandler={this.pressTest}
+          handler={this.pressTest}
         />
         <Button
           onPress={this.nextQuestion.bind(this)}
