@@ -12,8 +12,11 @@ export default class Form extends React.Component {
     }
   }
   // functions
-  buttonHandler () {
+  buttonHandler (qNo, score) {
     Alert.alert('touched')
+    let scoreObj = {}
+    scoreObj[qNo]=score
+    console.log(scoreObj)
   }
   nextQuestion () {
     if (this.state.index < questions.length) {
@@ -34,7 +37,7 @@ export default class Form extends React.Component {
                 key={response.score}
                 title='placeholder'
                 value={response.score}
-                onPress={this.buttonHandler}
+                onPress={() => this.buttonHandler(displayedQuestion.qNo, response.score)}
               />
             )
           } else {
