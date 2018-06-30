@@ -1,13 +1,20 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+
+import Form from './src/components/form'
+
+import qList from './src/lib/questionnaire/questions'
 
 export default class App extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
+
   render () {
     return (
       <View style={styles.container}>
-        <Text>Hi Emily!</Text>
-        <Text>testing reload</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Form />
       </View>
     )
   }
@@ -21,6 +28,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 })
-
-// some dev notes:
-// --Components for questions will need conditionals for sizing based on whether there is a response or not - ie a midrange value, also for is a question has additional notes in the object
