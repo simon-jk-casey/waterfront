@@ -1,9 +1,10 @@
 import React from 'react'
-import { Stylesheet, Text, View, Button, Alert } from 'react-native'
+import { Stylesheet, Text, View, Button } from 'react-native'
 
 import questions from '../lib/questionnaire/questions'
 
 export default class Form extends React.Component {
+
   constructor (props) {
     super(props)
     this.state = {
@@ -12,13 +13,12 @@ export default class Form extends React.Component {
       survey: []
     }
   }
+
   // functions
   buttonHandler (qNo, score) {
-    // Alert.alert('touched')
     let scoreObj = {}
     scoreObj[qNo] = score
     console.log('scoreObject: ', scoreObj)
-    // this.setState({survey: scoreObj})
     this.setState(prevState => ({
       survey: [...prevState.survey, scoreObj]
     }))
@@ -28,14 +28,7 @@ export default class Form extends React.Component {
       this.setState({surveyComplete: true})
     }
   }
-  // nextQuestion () {
-  //   if (this.state.index < questions.length - 1) {
-  //     this.setState({index: this.state.index + 1})
-  //   } else {
-  //     this.setState({surveyComplete: true})
-  //   }
-  //   // breaks after last question fix later
-  // }
+
   submitScore () {
     console.log('Submitting: ', this.state)
   }
@@ -68,11 +61,6 @@ export default class Form extends React.Component {
               )
             }
           })}
-          {/* <Button
-            onPress={this.nextQuestion.bind(this)}
-            title='Next'
-            color='#841584'
-          /> */}
         </View>
       )
     } else {
