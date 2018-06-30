@@ -22,18 +22,20 @@ export default class Form extends React.Component {
     this.setState(prevState => ({
       survey: [...prevState.survey, scoreObj]
     }))
-    if (this.state.index < questions.length) {
-      this.setState({index: this.state.index + 1})
-    }
-  }
-  nextQuestion () {
     if (this.state.index < questions.length - 1) {
       this.setState({index: this.state.index + 1})
     } else {
       this.setState({surveyComplete: true})
     }
-    // breaks after last question fix later
   }
+  // nextQuestion () {
+  //   if (this.state.index < questions.length - 1) {
+  //     this.setState({index: this.state.index + 1})
+  //   } else {
+  //     this.setState({surveyComplete: true})
+  //   }
+  //   // breaks after last question fix later
+  // }
   submitScore () {
     console.log('Submitting: ', this.state)
   }
@@ -66,11 +68,11 @@ export default class Form extends React.Component {
               )
             }
           })}
-          <Button
+          {/* <Button
             onPress={this.nextQuestion.bind(this)}
             title='Next'
             color='#841584'
-          />
+          /> */}
         </View>
       )
     } else {
@@ -78,7 +80,7 @@ export default class Form extends React.Component {
         <View>
           <Button
             title='submitScore'
-            onPress={() => this.submitScore}
+            onPress={() => this.submitScore()}
           />
         </View>
       )
