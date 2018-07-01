@@ -10,7 +10,8 @@ export default class Form extends React.Component {
     this.state = {
       surveyComplete: false,
       index: 0,
-      survey: []
+      survey: [],
+      totalScore: 0
     }
   }
 
@@ -20,7 +21,8 @@ export default class Form extends React.Component {
     scoreObj[qNo] = score
     console.log('scoreObject: ', scoreObj)
     this.setState(prevState => ({
-      survey: [...prevState.survey, scoreObj]
+      survey: [...prevState.survey, scoreObj],
+      totalScore: prevState.totalScore + score
     }))
     if (this.state.index < questions.length - 1) {
       this.setState({index: this.state.index + 1})
@@ -30,7 +32,20 @@ export default class Form extends React.Component {
   }
 
   submitScore () {
-    console.log('Submitting: ', this.state)
+    const data = {
+      //  hardcoding collectiopPointId until enrolment setup
+      collectionPointId: 1,
+      surveyData: this.state.survey,
+      totalScore: this.state.totalScore
+    }
+    return fetch('http://192.168.1.11:3000/api/v1/assessment', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => console.log(res))
   }
 
   render () {
