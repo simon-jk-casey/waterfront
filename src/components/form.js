@@ -30,13 +30,18 @@ export default class Form extends React.Component {
   }
 
   submitScore () {
+    const data = {
+      //  hardcoding collectiopPointId until enrolment setup
+      collectionPointId: 1,
+      surveyData: this.state.survey
+    }
     return fetch('http://192.168.1.11:3000/api/v1/test', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(this.state.survey)
+      body: JSON.stringify(data)
     }).then((res) => console.log(res))
   }
 
