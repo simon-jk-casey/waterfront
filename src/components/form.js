@@ -30,7 +30,7 @@ export default class Form extends React.Component {
   }
 
   submitScore () {
-    return fetch('localhost:3000/api/v1/test', {
+    return fetch('http://192.168.1.11:3000/api/v1/test', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
