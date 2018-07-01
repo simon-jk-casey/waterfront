@@ -30,7 +30,14 @@ export default class Form extends React.Component {
   }
 
   submitScore () {
-    console.log('Submitting: ', this.state)
+    return fetch('localhost:3000/api/v1/test', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state.survey)
+    }).then((res) => console.log(res))
   }
 
   render () {
