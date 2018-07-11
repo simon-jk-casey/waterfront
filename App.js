@@ -1,6 +1,8 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
+import { RootStack } from './src/config/router'
+
 import Form from './src/components/form'
 import MainMenu from './src/components/mainMenu'
 
@@ -14,10 +16,11 @@ export default class App extends React.Component {
 
   render () {
     return (
-      <View style={styles.container}>
-        <MainMenu />
-        {/* <Form /> */}
-      </View>
+      <RootStack />
+      // <View style={styles.container}>
+      //   <MainMenu />
+      //   {/* <Form /> */}
+      // </View>
     )
   }
 }

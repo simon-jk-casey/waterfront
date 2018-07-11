@@ -16,7 +16,7 @@ export default class MainMenu extends React.Component {
         <TouchableHighlight onPress={this.touchHandler}>
           <Text>About</Text>
         </TouchableHighlight>
-        <TouchableHighlight onPress={this.touchHandler}>
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('Survey')}>
           <Text>Begin Survey</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={this.touchHandler}>
