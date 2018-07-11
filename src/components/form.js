@@ -4,7 +4,6 @@ import { Stylesheet, Text, View, Button } from 'react-native'
 import questions from '../lib/questionnaire/questions'
 
 export default class Form extends React.Component {
-
   constructor (props) {
     super(props)
     this.state = {
