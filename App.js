@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
 import Form from './src/components/form'
+import MainMenu from './src/components/mainMenu'
 
 import qList from './src/lib/questionnaire/questions'
 
@@ -14,7 +15,8 @@ export default class App extends React.Component {
   render () {
     return (
       <View style={styles.container}>
-        <Form />
+        <MainMenu />
+        {/* <Form /> */}
       </View>
     )
   }
