@@ -37,7 +37,7 @@ export default class Form extends React.Component {
       surveyData: this.state.survey,
       totalScore: this.state.totalScore
     }
-    return fetch('http://192.168.1.11:3000/api/v1/assessment', {
+    return fetch('http://192.168.1.12:3000/api/v1/assessment', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
